@@ -148,45 +148,43 @@
             color: #fff;
             border-color: #333;
         }
-        .quiz-app-btn {
-            /* 構造の基本 */
-            display: inline-block;
-            padding: 12px 24px;
-            text-decoration: none; /* 下線を消す */
+        /* ボタン全体のスタイル */
+    .btn-sm-outline {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;        /* 上下左右の余白を小さく */
+        font-size: 13px;           /* 文字サイズをコンパクトに */
+        color: #333333;            /* 黒に近いグレー */
+        background-color: #ffffff; /* 背景白 */
+        border: 1px solid #333333; /* 細い黒枠 */
+        border-radius: 3px;        /* 角の丸みを抑える */
+        text-decoration: none;     /* 下線を消す */
+        transition: 0.2s ease;     /* 反応を少し速く */
+        margin-bottom: 8px;
+        cursor: pointer;
+        line-height: 1.2;
+    }
     
-            /* 色と枠線 */
-            background-color: #ffffff;   /* 背景：白 */    
-            color: #333333;              /* 文字：濃いグレー（黒すぎない黒） */
-            border: 1px solid #333333;   /* 枠線：1pxの細い線 */
-            border-radius: 4px;          /* 角をほんの少し丸く（シャープにするなら0） */
+    /* ホバー（マウスを乗せた時）のスタイル */
+    .btn-sm-outline:hover {
+        background-color: #f0f0f0; /* わずかにグレー */
+        border-color: #000000;     /* 枠線を少し強く */
+    }
     
-            /* フォントと配置 */
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            transition: all 0.3s ease;    /* 変化を滑らかにする */
-            cursor: pointer;
-        }
-    
-        /* ホバー時（マウスを乗せた時）の演出 */
-        .quiz-app-btn:hover {
-            background-color: #f5f5f5;   /* ほんの少しグレーにする */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 軽く浮き上がらせる */
-       }
-    
-        /* 矢印アイコンの余白 */
-        .icon {
-            margin-left: 8px;
-            font-size: 0.9em;
-        }
+    /* アイコンの調整 */
+    .btn-sm-outline .icon {
+        margin-left: 4px;
+        font-size: 11px;
+    }
+
     </style>
 </head>
 <body>
 
-    <h1>テキストデータベース</h1>
-    <a href="https://qwertyoshi-edu.github.io/UniQAT/index.html" target="_blank" rel="noopener noreferrer" class="quiz-app-btn">
+    <h1>一問一答問題データベース</h1>
+    <a href="https://qwertyoshi-edu.github.io/UniQAT/index.html" target="_blank" rel="noopener noreferrer" class="btn-sm-outline">
         一問一答アプリを開く <span class="icon">↗︎</span>
-    </a>    
+    </a>
     <div id="db-container">
         </div>
 
